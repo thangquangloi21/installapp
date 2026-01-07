@@ -1,0 +1,15 @@
+# bỏ qua thư mục
+._autoinstall/
+__pycache_/
+.khsx/
+.vscode/
+build/
+dist/
+.idea/
+
+
+# bỏ qua file có đuôi exe
+*.exe
+
+# bỏ qua file cụ thể
+.spec
