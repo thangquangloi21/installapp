@@ -209,7 +209,7 @@ def create_desktop_shortcut(target: Path, name: str | None = None, args: str = "
 
 def main():
     # ==== THAY ĐỔI CHO PHÙ HỢP VỚI LINK CỦA BẠN ====
-    url = "http://localhost:5000/zip"   # ví dụ: link Flask bạn đã tạo
+    url = "http://10.239.2.174:5000/zip"   # ví dụ: link Flask bạn đã tạo
     save_to = Path("downloads/sample.zip")    # nơi lưu tạm
     extract_to = Path("C:/APP")            # thư mục giải nén
     expected_sha256 = None                    # nếu có endpoint checksum thì điền vào
@@ -226,12 +226,12 @@ def main():
 
         # Tìm `testapp.exe` trong nội dung giải nén và tạo shortcut trên Desktop
         testapp = None
-        for p in extracted.rglob('testapp.exe'):
+        for p in extracted.rglob('M_PLUS.exe'):
             testapp = p
             break
         if testapp:
             try:
-                shortcut = create_desktop_shortcut(testapp, name='testapp')
+                shortcut = create_desktop_shortcut(testapp, name='M_PLUS_TEST')
                 print(f"Shortcut đã tạo trên Desktop: {shortcut}")
             except Exception as e:
                 print(f"Lỗi khi tạo shortcut: {e}")

@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # Đường dẫn đến file ZIP
-ZIP_PATH = os.path.join(os.path.dirname(__file__), 'files', 'KHSX_LOG.exe')
+ZIP_PATH = os.path.join(os.path.dirname(__file__), 'files', 'client.exe')
 ZIP_PATH1 = os.path.join(os.path.dirname(__file__), 'files', 'app.zip')
 
 @app.route('/app', methods=['GET'])
