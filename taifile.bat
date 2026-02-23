@@ -62,6 +62,13 @@ if exist "%SRC_EXE%" (
     ) else (
         echo Loi: Khong the tao shortcut. Ma loi %errorlevel%.
     )
+
+REM ====== NEW: LAUNCH THE APP AFTER EXTRACTION ======
+    echo Dang mo ung dung...
+    pushd "%EXTRACT_DIR%"
+    start "" "%SRC_EXE%"
+    popd
+
 ) else (
     echo Khong tim thay "%SRC_EXE%". Hay kiem tra ten file sau khi giai nen.
 )
